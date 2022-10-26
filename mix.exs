@@ -3,7 +3,7 @@ defmodule ExDevCycle.MixProject do
 
   defp description do
     """
-    Ex_DevCycle. Tiny library using Elixir to connect with DevCycle. https://devcycle.com.
+    ExDevCycle. Tiny library for Elixir to connect with DevCycle. https://devcycle.com.
     """
   end
 
@@ -12,7 +12,9 @@ defmodule ExDevCycle.MixProject do
       files: ["lib", "mix.exs", "README*", "LICENSE*"],
       maintainers: ["Pedro Luz"],
       licenses: ["MIT"],
-      links: %{"GitHub" => "https://github.com/Narven/ex_devcycle"}
+      links: %{
+        "GitHub" => "https://github.com/Narven/ex_devcycle"
+      }
     ]
   end
 

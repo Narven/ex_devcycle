@@ -8,16 +8,23 @@ defmodule ExDevCycle do
   plug(Tesla.Middleware.BaseUrl, "https://bucketing-api.devcycle.com/v1")
 
   plug(Tesla.Middleware.Headers, [
-    {"Content-Type", "application/json"},
-    {"Authorization", ""}
+    {"Content-Type", "application/json"}
   ])
 
   plug(Tesla.Middleware.JSON)
 
+  def config, do: struct(ExDevCycle.Config, Application.get_all_env(:ex_devcycle))
+
   def get_variable(variable, user_id) do
-    post("/variables/" <> variable, %{
-      user_id: user_id
-    })
+    post(
+      "/variables/" <> variable,
+      %{
+        user_id: user_id
+      },
+      headers: [
+        {"Authorization", config().key}
+      ]
+    )
   end
 
   @doc """
