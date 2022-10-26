@@ -3,7 +3,7 @@ defmodule ExDevCycle.MixProject do
 
   defp description do
     """
-    ExDevCycle. Tiny library to connect with DevCycle. https://devcycle.com.
+    Ex_DevCycle. Tiny library using Elixir to connect with DevCycle. https://devcycle.com.
     """
   end
 
