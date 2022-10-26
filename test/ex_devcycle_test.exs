@@ -1,8 +1,8 @@
-defmodule ExDevcycleTest do
+defmodule ExDevCycleTest do
   use ExUnit.Case
-  doctest ExDevcycle
+  doctest ExDevCycle
 
   test "greets the world" do
-    assert ExDevcycle.hello() == :world
+    assert ExDevCycle.hello() == :world
   end
 end

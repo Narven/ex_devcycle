@@ -1,5 +1,20 @@
-defmodule ExDevcycle.MixProject do
+defmodule ExDevCycle.MixProject do
   use Mix.Project
+
+  defp description do
+    """
+    ExDevCycle. Tiny library to connect with DevCycle. https://devcycle.com.
+    """
+  end
+
+  defp package do
+    [
+      files: ["lib", "mix.exs", "README*", "LICENSE*"],
+      maintainers: ["Pedro Luz"],
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/Narven/ex_devcycle"}
+    ]
+  end
 
   def project do
     [
@@ -7,6 +22,8 @@ defmodule ExDevcycle.MixProject do
       version: "0.1.0",
       elixir: "~> 1.14",
       start_permanent: Mix.env() == :prod,
+      description: description(),
+      package: package(),
       deps: deps()
     ]
   end
@@ -21,8 +38,7 @@ defmodule ExDevcycle.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      # {:dep_from_hexpm, "~> 0.3.0"},
-      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
+      {:tesla, "~> 1.4"}
     ]
   end
 end

@@ -24,3 +24,6 @@ ex_devcycle-*.tar
 
 # Temporary files, for example, from tests.
 /tmp/
+
+.vscode
+.idea
