@@ -40,7 +40,8 @@ defmodule ExDevCycle.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:tesla, "~> 1.4"}
+      {:tesla, "~> 1.4"},
+      {:jason, "~> 1.4", only: [:test], runtime: false}
     ]
   end
 end

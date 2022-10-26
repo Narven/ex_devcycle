@@ -2,7 +2,7 @@ defmodule ExDevCycleTest do
   use ExUnit.Case
   doctest ExDevCycle
 
-  test "greets the world" do
-    assert ExDevCycle.hello() == :world
+  test "gets a feature flag" do
+    assert ExDevCycle.is_enabled?("any-flag") == nil
   end
 end

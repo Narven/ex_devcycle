@@ -33,7 +33,7 @@ defmodule ExDevCycle do
   ## Examples
 
       iex> ExDevCycle.is_enabled?("feature-flag-name")
-      flase
+      nil
 
   """
   def is_enabled?(variable, user_id \\ "user_id") do
