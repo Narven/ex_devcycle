@@ -41,7 +41,8 @@ defmodule ExDevCycle.MixProject do
   defp deps do
     [
       {:tesla, "~> 1.4"},
-      {:jason, "~> 1.4", only: [:test], runtime: false}
+      {:jason, "~> 1.4", only: [:test], runtime: false},
+      {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
     ]
   end
 end
